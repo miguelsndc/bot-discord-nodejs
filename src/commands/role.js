@@ -8,15 +8,15 @@ const execute = (bot, msg, args) => {
       "Para escolher uma área de interesse, reaja à essa mensagem com os emojis que desejar. Cada uma das áreas possui um emoji, representados abaixo:"
     );
     embed.setAuthor(
-      "Vai todo mundo pra casa do karalho 😎",
+      "Autor",
       `https://cdn.discordapp.com/icons/${msg.guild.id}/${msg.guild.icon}.png`,
       "https://github.com/miguelsndc"
     );
     embed.addFields([
-      { name: "Dono do bar", value: "😎", inline: true },
-      { name: "Garçom", value: "👺", inline: true },
-      { name: "Cliente bêbado", value: "🤮", inline: true },
-      { name: "JBL", value: "🤖", inline: true },
+      { name: "Cargo1", value: "😎", inline: true },
+      { name: "Cargo2", value: "👺", inline: true },
+      { name: "Cargo3o", value: "🤮", inline: true },
+      { name: "Musica", value: "🤖", inline: true },
     ]);
     msg.member.send({ embed }).then(async (embed) => {
       try {
@@ -36,22 +36,22 @@ const execute = (bot, msg, args) => {
           let role;
           switch (reaction.emoji.name) {
             case "😎":
-              role = msg.guild.roles.cache.find((r) => r.name === "Dono do bar");
+              role = msg.guild.roles.cache.find((r) => r.name === "Cargo1");
               if (role) msg.member.roles.add(role);
               else console.error("Cargo não encontrado");
               break;
             case "👺":
-              role = msg.guild.roles.cache.find((r) => r.name === "Garçom");
+              role = msg.guild.roles.cache.find((r) => r.name === "Cargo2");
               if (role) msg.member.roles.add(role);
               else console.error("Cargo não encontrado");
               break;
             case "🤮":
-              role = msg.guild.roles.cache.find((r) => r.name === "Cliente bêbado");
+              role = msg.guild.roles.cache.find((r) => r.name === "Cargo3");
               if (role) msg.member.roles.add(role);
               else console.error("Cargo não encontrado");
               break;
             case "🤖":
-              role = msg.guild.roles.cache.find((r) => r.name === "JBL");
+              role = msg.guild.roles.cache.find((r) => r.name === "Cargo4");
               if (role) msg.member.roles.add(role);
               else console.error("Cargo não encontrado");
               break;
