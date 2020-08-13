@@ -1,0 +1,25 @@
+{
+  "name": "bot-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.2",
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "ffmpeg": "0.0.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "yt-search": "^2.1.8",
+    "ytdl-core-discord": "^1.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
